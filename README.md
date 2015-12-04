@@ -1,4 +1,4 @@
-# Hack Out West 2015 Showcase site
+# Hack for Refugees Showcase site
 
 ## Develop
 
