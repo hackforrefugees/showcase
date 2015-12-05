@@ -1,9 +1,9 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     minify = require('gulp-minify-css'),
+    rename = require('gulp-rename'),
     path = require('path'),
-    app = require('./app'),
-    handlebars  = require('gulp-static-handlebars'),
+    handlebars = require('gulp-compile-handlebars'),
     Teams = require('./lib/teams'),
     gutil = require('gulp-util')
 
@@ -14,33 +14,22 @@ var buildSass = function() {
     .pipe(gulp.dest('public/css'))
 }
 
-gulp.task('default', ['serve'])
+gulp.task('default', ['css', 'build-html'])
 
 gulp.task('css', buildSass)
 
-gulp.task('serve', ['watch', 'server'])
-
-gulp.task('server', function() {
-  app.set('port', process.env.PORT || 3000)
-
-  var server = app.listen(app.get('port'), function() {
-    gutil.log('Express server listening on port ' + server.address().port)
-  })
+gulp.task('build-html', function(){
+  return Teams.loadTeams(function (result) {
+    console.log('asdkjadkljalkdjalkdsjlakjds');
+    console.log(result)
+    return gulp.src('./views/index.handlebars')
+      .pipe(handlebars(result))
+      .pipe(rename('index.html'))
+      .pipe(gulp.dest('./dist'));
+  });
 })
 
 
-
-Teams.loadTeams(function (result) {
-  //gulp.src('./views/layouts/main.handlebars')
-  gulp.src('./views/index.handlebars')
-    .pipe(
-     handlebars(/*{defaultLayout: 'main'}, {
-      partials: gulp.src('./views/partials/*.handlebars'),
-      defaultLayout: 'main',
-      helpers: './lib/helpers/*.*'
-    })
-    ).pipe(gulp.dest('./dist'));
-});
 
 //gulp.src('./views/layout/main.handlebars')
 gulp.task('watch', function() {
