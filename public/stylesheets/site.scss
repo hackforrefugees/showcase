@@ -1,6 +1,7 @@
 @import "icons";
 @import "utils";
 @import "animations";
+@import "fonts";
 
 $use-markup-fix: false;
 
@@ -119,6 +120,12 @@ body {
       text-transform: uppercase;
       letter-spacing: 2px;
       position: relative;
+      .header {
+        font-size: 2em;
+        display: block;
+      }
+      color: #fff;
+      font-style: normal;
   }
   .date-banner:before {
         content: '';
