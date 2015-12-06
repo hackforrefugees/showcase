@@ -30,17 +30,8 @@
     <main role="main">
       <section>
         <div class="grid">
-          <h1>Winners</h1>
-          {{#each winners ~}}
-            {{~> hack ~}}
-          {{~/each}}
-        </div>
-      </section>
-
-      <section>
-        <div class="grid">
-          <h1>Other hacks</h1>
-          {{#each others ~}}
+          <h1>Projects</h1>
+          {{#each teams ~}}
             {{~> hack ~}}
           {{~/each}}
         </div>
