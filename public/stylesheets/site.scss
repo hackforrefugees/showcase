@@ -85,6 +85,15 @@ body {
   }
 }
 
+[role="main"] {
+    h1 {
+        font-family: "Pacifico",serif;
+        font-weight: normal;
+        text-transform: none;
+        letter-spacing: normal;
+    }
+}
+
 section {
   margin-bottom: $lineheight*3;
 }
