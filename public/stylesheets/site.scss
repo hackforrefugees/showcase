@@ -61,6 +61,8 @@ body {
     text-align: center;
     background-image: url("/images/splash.jpg");
     background-size: cover;
+    color: white;
+
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -99,6 +101,7 @@ body {
   }
 
   h2 {
+      color: white;
       font-size: 6em;
       font-weight: normal;
       margin-bottom: 0px;
@@ -113,7 +116,6 @@ body {
       margin-top: 1.5rem;
       font-size: 1.2rem;
       font-family: "bariol_regularregular";
-      color: black;
       text-transform: uppercase;
       letter-spacing: 2px;
       position: relative;
@@ -126,7 +128,7 @@ body {
         top: 3.2rem;
         height: 1px;
         width: 30%;
-        background-color: black;
+        background-color: white;
   }
   .date-banner:after {
         content: '';
@@ -136,7 +138,7 @@ body {
         top: 3.2rem;
         height: 1px;
         width: 30%;
-        background-color: black;
+        background-color: white;
   }
 
   .grid__item:first-child {
