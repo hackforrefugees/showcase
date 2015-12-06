@@ -5,25 +5,30 @@ var gulp = require('gulp'),
     path = require('path'),
     handlebars = require('gulp-compile-handlebars'),
     Teams = require('./lib/teams'),
+    helpers = require('./lib/helpers'),
     gutil = require('gulp-util')
 
 var buildSass = function() {
   return gulp.src('public/stylesheets/*.scss')
     .pipe(sass())
     .pipe(minify({ cache: true }))
-    .pipe(gulp.dest('public/css'))
+    .pipe(gulp.dest('./dist/css'))
 }
 
-gulp.task('default', ['css', 'build-html'])
+gulp.task('default', ['build-html'])
 
 gulp.task('css', buildSass)
 
-gulp.task('build-html', function(){
+options = {
+  ignorePartials: false, //ignores the unknown footer2 partial in the handlebars template, defaults to false
+  batch : ['./views/layouts', './views/partials'],
+  helpers : helpers
+};
+
+gulp.task('build-html',['css'], function(){
   return Teams.loadTeams(function (result) {
-    console.log('asdkjadkljalkdjalkdsjlakjds');
-    console.log(result)
     return gulp.src('./views/index.handlebars')
-      .pipe(handlebars(result))
+      .pipe(handlebars(result, options))
       .pipe(rename('index.html'))
       .pipe(gulp.dest('./dist'));
   });
