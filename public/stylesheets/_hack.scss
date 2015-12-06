@@ -6,6 +6,12 @@
   min-height: $lineheight*20;
   margin-bottom: $lineheight*2;
 
+  h2 {
+    font-family: Pacifico,serif;
+    text-transform: none;
+
+  }
+
   .desc {
     margin: $lineheight / 2 0;
     min-height: $lineheight*6;
