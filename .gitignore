@@ -4,3 +4,4 @@ npm-debug.log
 auth.json
 .env
 dist/
+public/index.html
