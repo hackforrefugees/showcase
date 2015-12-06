@@ -12,7 +12,7 @@ var buildSass = function() {
   return gulp.src('public/stylesheets/*.scss')
     .pipe(sass())
     .pipe(minify({ cache: true }))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('./public/css'))
 }
 
 gulp.task('default', ['build-html'])
@@ -30,7 +30,7 @@ gulp.task('build-html',['css'], function(){
     return gulp.src('./views/index.handlebars')
       .pipe(handlebars(result, options))
       .pipe(rename('index.html'))
-      .pipe(gulp.dest('./dist'));
+      .pipe(gulp.dest('./public'));
   });
 })
 
