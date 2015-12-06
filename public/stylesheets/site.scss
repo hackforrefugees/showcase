@@ -125,5 +125,9 @@ section {
 @import "detailedhack";
 
 .img-circle {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
     border-radius: 50%;
+    background-position: center;
 }
