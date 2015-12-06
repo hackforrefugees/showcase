@@ -1,8 +1,8 @@
 <div class="grid__item one-third lap--one-half palm--one-whole">
   <article class="hack">
     {{#with repository}}
-    <h2>{{#if name}}{{unSlugify name}}{{else}}No name{{/if}}</h2>
     <img src="{{ thumbnailOrDefault ../thumbnail }}" alt="{{name}}" />
+    <h2>{{#if name}}{{unSlugify name}}{{else}}No name{{/if}}</h2>
     <p class="desc">
     {{~#if description ~}}
       {{description}}
@@ -10,31 +10,6 @@
       <span class="no-content">No description yet</span>
     {{~/if~}}
     </p>
-
-    <p class="links">
-      {{#if homepage}}
-      <a class="btn block-link" href="{{homepage}}">Check it out <span class="icon"></span></a>
-      {{else}}
-      <a class="btn block-link disabled">Hack is not live yet</a>
-      {{/if}}
-      {{#unless private}}
-      <small><a href="{{html_url}}">{{cleanUrl html_url}}</a></small>
-      {{/unless}}
-    </p>
     {{/with}}
-
-    <footer>
-      <h3>Made by {{name}}</h3>
-      <ul class="members-list">
-      {{#each members ~}}
-        <li>
-          <a href="{{html_url}}" class="block-link">
-            <img class="avatar" src="{{avatar_url}}" alt="@{{login}}" />
-            <span class="username">@{{login}}</span>
-          </a>
-        </li>
-      {{~/each}}
-      </ul>
-    </footer>
   </article>
 </div>
