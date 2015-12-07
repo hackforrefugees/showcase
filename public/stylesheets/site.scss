@@ -8,7 +8,9 @@ $use-markup-fix: false;
 
 @import "grid";
 
-$accent: #71BC60;
+
+
+$accent: #4569ff;
 $text-color: #333;
 $gray: #999;
 
@@ -54,14 +56,12 @@ body {
 
 
 [role="banner"] {
-  margin-top: -2rem;
-  padding-top: 10rem;
   margin-bottom: $lineheight;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    background-image: url("/images/splash.jpg");
+    background-image: url("images/splash.jpg");
     background-size: cover;
     color: white;
 
@@ -71,7 +71,7 @@ body {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 1.5882352941rem 2%;
+    padding: 5.5882352941rem 2%;
     z-index: 3;
     -webkit-animation-name: fadeIn;
     -ms-animation-name: fadeIn;
@@ -204,7 +204,7 @@ body {
 }
 
 [role="main"] {
-  margin: auto;
+  margin: 5% auto;
   max-width: 1200px;
     h1 {
         font-family: "Pacifico",serif;

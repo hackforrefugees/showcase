@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     handlebars = require('gulp-compile-handlebars'),
     Teams = require('./lib/teams'),
     helpers = require('./lib/helpers'),
-    gutil = require('gulp-util')
+    gutil = require('gulp-util'),
+    ghPages = require('gulp-gh-pages');
 
 var buildSass = function() {
   return gulp.src('public/stylesheets/*.scss')
@@ -40,3 +41,9 @@ gulp.task('build-html',['css'], function(){
 gulp.task('watch', function() {
   return gulp.watch('public/stylesheets/*.scss', ['css'])
 })
+
+
+gulp.task('deploy', function() {
+  return gulp.src('./public/**/*')
+    .pipe(ghPages());
+});

@@ -10,7 +10,7 @@
   <body>
 
     <header role="banner">
-        <h1>Hack for Refugees</h1>
+        <a href="http://hackforrefugees.com"><h1>Hack for Refugees</h1></a>
         <h2>
           <span>Showcase</span>
         </h2>
@@ -29,30 +29,17 @@
                 <span class="stats">COMMITS</span>
             </div>
         </div>
-        <!--
-        <div>
-            <h2 style="font-size: 9em">500 000</h2>
-            <span class="stats">LINES OF CODE</span>
-        </div>
-        -->
     </header>
 
     <main role="main">
       <section>
-          <h1>9 amazing projects</h1>
+          <h1 class="blue">{{teams.length}} amazing projects</h1>
           <header>Hackers, volunteers, students and professionals gathered <br/>during an intense weekend to see what can be done to help refugees and society.<br />This is what they came up with.</header>
         <div class="grid">
           {{#each teams ~}}
             {{~> hack ~}}
           {{~/each}}
         </div>
-        <!--
-        <div class="grid">
-          {{#each teams ~}}
-            {{~> detailedhack ~}}
-          {{~/each}}
-        </div>
-        -->
       </section>
     </main>
 
