@@ -1,5 +1,6 @@
 @import "icons";
 @import "utils";
+@import "fonts";
 @import "animations";
 @import "fonts";
 
@@ -55,6 +56,7 @@ body {
 
 
 [role="banner"] {
+  padding-top: 5rem;
   margin-bottom: $lineheight;
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -96,7 +98,7 @@ body {
     color: #ff6e40;
     text-align: center;font-family: $cursive;
     text-transform: none;
-    font-size: 8vw;
+    font-size: 5vw;
     margin: 0;
     letter-spacing: 0;
   }
@@ -106,6 +108,40 @@ body {
       font-size: 6em;
       font-weight: normal;
       margin-bottom: 0px;
+  }
+
+  .date-banner {
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-family: "bariol_regularregular";
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+
+    &:before {
+      content:'';
+      position: absolute;
+      left:0;
+      line-height: 1.2rem;
+      top: 0.8rem;
+      height: 1px;
+      width: 25%;
+      background-color: white;
+    }
+
+
+    &:after {
+      content:'';
+      position: absolute;
+      right:0;
+      line-height: 1.2rem;
+      top: 0.8rem;
+      height: 1px;
+      width: 25%;
+      background-color: white;
+    }
   }
 
   .stats {

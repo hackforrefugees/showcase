@@ -3,8 +3,14 @@
 
 .hack {
   text-align: center;
-  min-height: $lineheight*20;
+  min-height: $lineheight*17;
   margin-bottom: $lineheight*2;
+
+  text-decoration: none;
+
+  img[src="/images/default.png"] {
+    opacity: 0;
+  }
 
   h2 {
     font-family: Pacifico,serif;
@@ -25,6 +31,23 @@
       margin-top: .5em;
     }
   }
+
+  a {
+    color: $text-color;
+
+    &:hover {
+     text-decoration: none;
+
+    }
+
+  }
+
+  &:hover {
+    cursor: pointer;
+    transition: 200ms;
+    transform: scale(1.05);
+  }
+
 }
 
 .members-list {

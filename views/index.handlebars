@@ -12,10 +12,8 @@
     <header role="banner">
         <h1>Hack for Refugees</h1>
         <h3 class="date-banner">
-            <div style="width: 41em; margin-left: 1em; margin-right: 1em;">
-                <span class="header">Showcase</span>
-                5 - 6 December 2015
-            </div>
+          <span>Showcase</span>
+          <br/>5 - 6 December 2015
         </h3>
 
         <div class="grid">
@@ -45,6 +43,11 @@
         <div class="grid">
           {{#each teams ~}}
             {{~> hack ~}}
+          {{~/each}}
+        </div>
+        <div class="grid">
+          {{#each teams ~}}
+            {{~> detailedhack ~}}
           {{~/each}}
         </div>
       </section>
