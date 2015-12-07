@@ -1,7 +1,8 @@
 <div class="grid__item one-third lap--one-half palm--one-whole">
     <article class="hack">
-      <a href="#{{name}}">
+      <!--<a href="#{{name}}">-->
       {{#with repository}}
+      <a href="{{html_url}}" target="_blank">
       <img src="{{ thumbnailOrDefault ../thumbnail }}" alt="{{name}}" />
       <h2>{{#if name}}{{unSlugify name}}{{else}}No name{{/if}}</h2>
       <p class="desc">
