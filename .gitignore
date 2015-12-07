@@ -4,4 +4,5 @@ npm-debug.log
 auth.json
 .env
 dist/
+public/css/site.css
 public/index.html
